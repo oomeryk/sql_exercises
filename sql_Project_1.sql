@@ -86,7 +86,6 @@ on customer.p_id = product.p_id
 ----------------------------------------------------------------------------------------------------
 --order by, having
 --group by, having
---primary key, foreing key
 --identity
 --select distinct, unique
 --min max count avg sum
