@@ -16,9 +16,9 @@ amount float
 insert into customer (c_id, c_name, product_id, amount)
 values (1,'ali',2, 1),
        (2,'veli',4, 2), 
-	   (3,'nuri',3, 2.5),
-	   (4,'safi',3, 2),
-	   (5,'saki',null, null);
+       (3,'nuri',3, 2.5),
+       (4,'safi',3, 2),
+       (5,'ayse',null, null);
 
 --Rename:
 
@@ -61,6 +61,26 @@ select * from product
 
 
 -----------------------------------------------------------------------------
+--order by/ group by
+
+select c_name, amount 
+from customer
+order by amount asc
+
+
+alter table customer add gender varchar(10);
+insert into customer (gender)
+values  ('male'),
+	('male'),
+	('male'),
+	('male'),
+        ('female');
+select *
+from customer
+group by gender
+
+
+------------------------------------------------------------------------------
 --Joins:
 
 select c_id, c_name, p_name, price, amount, (amount*price)as paid
@@ -84,14 +104,7 @@ on customer.p_id = product.p_id
 
 
 ----------------------------------------------------------------------------------------------------
---order by, having
---group by, having
---identity
---select distinct, unique
---min max count avg sum
---in between and or not
---any all
---case
+
  
 
 
