@@ -9,7 +9,7 @@ use new
 
 create table customer(
 c_id int primary key,
-c_name varchar(10),
+c_name varchar(10) not null,
 product_id int FOREIGN KEY REFERENCES product(p_id),
 amount float
 )
@@ -31,7 +31,7 @@ select * from customer
 
 create table product(
 p_id int primary key,
-p_name varchar(10),
+p_name varchar(10) unique not null,
 price float
 )
 insert into product (p_id, p_name, price)
