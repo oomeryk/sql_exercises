@@ -10,7 +10,7 @@ use new
 create table customer(
 c_id int primary key,
 c_name varchar(10),
-product_id int,
+product_id int FOREIGN KEY REFERENCES product(p_id),
 amount float
 )
 insert into customer (c_id, c_name, product_id, amount)
